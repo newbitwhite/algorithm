@@ -1,6 +1,7 @@
 package element.dynamic_array;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class DynamicArray<T>{
     private static final int DEFAULT_CAPACITY = 10;
@@ -41,12 +42,13 @@ public class DynamicArray<T>{
         return size;
     }
 
+    @SuppressWarnings("unchecked")
     private void ensureCapacity(){
         if (size >= length){
             length += CAPACITY_STEP;
             Object[] ts = new Object[length];
             for (int i = 0; i < size; i++) {
-                ts[i] = elementData[i];
+                Arrays.copyOf(elementData, length);
             }
             elementData = ts;
         }
