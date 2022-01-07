@@ -1,33 +1,36 @@
 package element.dynamic_array;
 
-class DynamicArray<T>{
+import java.util.ArrayList;
+
+public class DynamicArray<T>{
     private static final int DEFAULT_CAPACITY = 10;
     private static final int CAPACITY_STEP = 10;
     private int size;
     private int length;
-    private T[] elementData;
+    private Object[] elementData;
 
     public DynamicArray(){
         this(DEFAULT_CAPACITY);
     }
 
     public DynamicArray(int capacity){
-        this.length = capacity;
-        this.elementData = (T[])new Object[capacity];
+        length = capacity;
+        elementData = new Object[capacity];
     }
 
     public void add(T addVar){
-        this.ensureCapacity();
-        this.elementData[this.size] = addVar;
-        ++this.size;
+        ensureCapacity();
+        elementData[size] = addVar;
+        ++size;
     }
 
     public void remove(int index){
 
     }
 
-    public void get(int index){
-
+    @SuppressWarnings("unchecked")
+    public T get(int index){
+        return (T) elementData[index];
     }
 
     public void set(int index, T addVar){
@@ -35,21 +38,17 @@ class DynamicArray<T>{
     }
 
     public int size(){
-        return this.size;
-    }
-
-    public int length(){
-        return this.length;
+        return size;
     }
 
     private void ensureCapacity(){
-        if (this.size >= this.length){
-            this.length += CAPACITY_STEP;
-            T[] ts = (T[]) new Object[this.length];
-            for (int i = 0; i < this.size; i++) {
-                ts[i] = this.elementData[i];
+        if (size >= length){
+            length += CAPACITY_STEP;
+            Object[] ts = new Object[length];
+            for (int i = 0; i < size; i++) {
+                ts[i] = elementData[i];
             }
-            this.elementData = ts;
+            elementData = ts;
         }
     }
 }
