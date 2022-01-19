@@ -9,7 +9,7 @@ class AssignCookiesTest {
     public void test_assign(){
         int[] kids = new int[]{2,3,3,1,1};
         int[] cookies = new int[]{1,2,2,2,3};
-        int func = new AssignCookies().assign(kids, cookies);
+        int func = new AssignCookies().findContentChildren(kids, cookies);
         System.out.println(func);
         Assertions.assertEquals(4, func);
     }
