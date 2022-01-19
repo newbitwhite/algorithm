@@ -7,10 +7,10 @@ class CandyTest {
 
     @Test
     public void test_assign(){
-        int[] ints = {1,0,2,3,4,4};
+        int[] ints = {1,2,1,2,3,1,1};
         int assign = new Candy().assign(ints);
         System.out.println(assign);
-        Assertions.assertEquals(13, assign);
+        Assertions.assertEquals(11, assign);
     }
 
 }

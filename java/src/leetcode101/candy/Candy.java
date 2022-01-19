@@ -20,7 +20,8 @@ public class Candy {
 
         for (int i = kidsScores.length-1; i > 0; i--) {
             if (kidsScores[i-1] > kidsScores[i]){
-                candies[i-1] = candies[i] + 1;
+                //易错点：这里的max很容易想不到，漏了
+                candies[i-1] = Math.max(candies[i-1], candies[i] + 1);
             }
         }
 
