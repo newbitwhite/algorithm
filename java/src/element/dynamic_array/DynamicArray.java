@@ -1,6 +1,5 @@
 package element.dynamic_array;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class DynamicArray<T>{
