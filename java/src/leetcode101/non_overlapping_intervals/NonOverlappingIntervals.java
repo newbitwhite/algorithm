@@ -1,6 +1,7 @@
 package leetcode101.non_overlapping_intervals;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * 435.non-overlapping intervals [Medium]
@@ -14,15 +15,7 @@ public class NonOverlappingIntervals {
             return 0;
         }
         //time：O(nlog(n))   space：O(log(n))
-        Arrays.sort(intervals, (int[] a1, int[] a2) -> {
-            if (a1[1] > a2[1]){
-                return 1;
-            }
-            if (a1[1] < a2[1]){
-                return -1;
-            }
-            return 0;
-        });
+        Arrays.sort(intervals, Comparator.comparingInt((int[] a) -> a[1]));
         int removedIntervals = 0;
         int[] prev = intervals[0];
         //time：O(n)    space：O(1)
