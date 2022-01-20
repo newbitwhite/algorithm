@@ -3,7 +3,7 @@ package leetcode101.candy;
 import java.util.Arrays;
 
 /**
- * 135.Candy[Hard]
+ * 135.Candy [Hard]
  * @author ：xiaobai
  * @date ：2022/1/19 16:46
  */
