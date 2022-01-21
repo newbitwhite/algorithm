@@ -1,4 +1,4 @@
-package leetcode101.minimum_number_of_arrows_to_burst_balloons;
+package leetcode101.greedy.minimum_number_of_arrows_to_burst_balloons;
 
 import java.util.Arrays;
 import java.util.Comparator;

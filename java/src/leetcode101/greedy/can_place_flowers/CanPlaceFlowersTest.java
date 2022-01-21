@@ -1,4 +1,4 @@
-package leetcode101.can_place_flowers;
+package leetcode101.greedy.can_place_flowers;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

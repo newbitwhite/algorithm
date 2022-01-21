@@ -1,4 +1,4 @@
-package leetcode101.non_overlapping_intervals;
+package leetcode101.greedy.non_overlapping_intervals;
 
 import java.util.Arrays;
 import java.util.Comparator;

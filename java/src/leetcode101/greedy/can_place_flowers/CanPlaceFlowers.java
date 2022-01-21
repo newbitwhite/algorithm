@@ -1,4 +1,4 @@
-package leetcode101.can_place_flowers;
+package leetcode101.greedy.can_place_flowers;
 
 /**
  * 605. Can Place Flowers

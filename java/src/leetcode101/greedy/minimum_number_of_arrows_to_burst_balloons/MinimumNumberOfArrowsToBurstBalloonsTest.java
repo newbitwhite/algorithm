@@ -1,9 +1,7 @@
-package leetcode101.minimum_number_of_arrows_to_burst_balloons;
+package leetcode101.greedy.minimum_number_of_arrows_to_burst_balloons;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class MinimumNumberOfArrowsToBurstBalloonsTest {
     @Test

@@ -1,4 +1,4 @@
-package leetcode101.candy;
+package leetcode101.greedy.candy;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package leetcode101.assign_cookies;
+package leetcode101.greedy.assign_cookies;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package leetcode101.candy;
+package leetcode101.greedy.candy;
 
 import java.util.Arrays;
 
