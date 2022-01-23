@@ -3,8 +3,6 @@ package leetcode101.greedy.best_time_to_buy_and_sell_stock_2;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class BestTimeToBuyAndSellStockIITest {
     @Test
     public void test_max_profit(){
