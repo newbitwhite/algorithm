@@ -7,7 +7,7 @@ class NonDecreasingArrayTest {
 
     @Test
     public void test_check_possibility(){
-        int[] ints = {4,3,2};
+        int[] ints = {5,7,1,8};
         boolean b = new NonDecreasingArray().checkPossibility(ints);
         System.out.println(b);
         Assertions.assertEquals(false, b);
