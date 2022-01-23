@@ -1,6 +1,4 @@
-
-
-Greedy   
+## Greedy
 
 | # | Title  | Solution | Difficulty |
 |---| -----  | -------- | ---------- |
@@ -13,3 +11,9 @@ Greedy
 |605|[Can Place Flowers](https://leetcode-cn.com/problems/can-place-flowers/)|[leetcode101](JavaVersion/src/main/java/leetcode101/greedy/can_place_flowers)|Easy|
 |665|[Non-decreasing Array](https://leetcode-cn.com/problems/non-decreasing-array/)|[leetcode101](JavaVersion/src/main/java/leetcode101/greedy/non_descreasing_array)|Medium|
 |763|[Partition Labels](https://leetcode-cn.com/problems/partition-labels/)|[leetcode101](JavaVersion/src/main/java/leetcode101/greedy/partition_labels)|Medium|
+
+## Two Pointers
+
+| # | Title  | Solution | Difficulty |
+|---| -----  | -------- | ---------- |
+|167|[Two Sum II - Input Array Is Sorted](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)|[leetcode101](JavaVersion/src/main/java/leetcode101/two_pointers/two_sum_ii_input_array_is_sorted)|Medium|
