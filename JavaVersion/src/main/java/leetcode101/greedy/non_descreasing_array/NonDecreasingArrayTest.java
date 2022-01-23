@@ -12,5 +12,4 @@ class NonDecreasingArrayTest {
         System.out.println(b);
         Assertions.assertEquals(false, b);
     }
-
 }
