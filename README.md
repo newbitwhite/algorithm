@@ -16,4 +16,5 @@
 
 | # | Title  | Solution | Difficulty |
 |---| -----  | -------- | ---------- |
-|167|[Two Sum II - Input Array Is Sorted](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)|[leetcode101](JavaVersion/src/main/java/leetcode101/two_pointers/two_sum_ii_input_array_is_sorted)|Medium|
+|88|[Merge Sorted Array](https://leetcode-cn.com/problems/merge-sorted-array/)|[leetcode101](JavaVersion/src/main/java/leetcode101/two_pointers/merge_sorted_array)|Easy|
+|167|[Two Sum II - Input Array Is Sorted](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)|[leetcode101](JavaVersion/src/main/java/leetcode101/two_pointers/two_sum_ii_input_array_is_sorted)|Easy|
