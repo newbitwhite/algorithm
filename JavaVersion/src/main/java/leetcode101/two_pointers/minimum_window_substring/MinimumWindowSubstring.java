@@ -32,7 +32,7 @@ public class MinimumWindowSubstring {
                 }
 
                 while (count == tChars.length){
-                    if (statistics.containsKey(sChars[left]) && ){
+                    if (statistics.containsKey(sChars[left]) && true){
                         --count;
                         statistics.put(sChars[left], statistics.get(sChars[left])+1);
                     }
