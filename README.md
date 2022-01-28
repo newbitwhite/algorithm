@@ -1,4 +1,6 @@
-## Greedy
+
+## LeetCode101 
+### Greedy
 
 | # | Title  | Solution | Difficulty |
 |---| -----  | -------- | ---------- |
@@ -12,7 +14,7 @@
 |665|[Non-decreasing Array](https://leetcode-cn.com/problems/non-decreasing-array/)|[leetcode101](JavaVersion/src/main/java/leetcode101/greedy/non_descreasing_array)|Medium|
 |763|[Partition Labels](https://leetcode-cn.com/problems/partition-labels/)|[leetcode101](JavaVersion/src/main/java/leetcode101/greedy/partition_labels)|Medium|
 
-## Two Pointers
+### Two Pointers
 
 | # | Title  | Solution | Difficulty |
 |---| -----  | -------- | ---------- |
