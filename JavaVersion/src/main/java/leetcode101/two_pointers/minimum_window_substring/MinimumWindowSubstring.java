@@ -21,20 +21,21 @@ public class MinimumWindowSubstring {
         //寻找满足条件的s的子串
         char[] sChars = s.toCharArray();
         int count = 0;
-        int minSize = sChars.length;
+        int minSize = sChars.length + 1;
         int minLeft = 0;
         int left = 0;
         for (int right = 0; right < sChars.length; right++) {
             if (statistics.containsKey(sChars[right])){
+                ++count;
                 if (statistics.get(sChars[right]) > 0){
-                    ++count;
                     statistics.put(sChars[right], statistics.get(sChars[right])-1);
                 }
-
                 while (count == tChars.length){
-                    if (statistics.containsKey(sChars[left]) && true){
-                        --count;
+                    if (statistics.containsKey(sChars[left])){
                         statistics.put(sChars[left], statistics.get(sChars[left])+1);
+                        if (statistics.get(sChars[left]) > 0){
+                            --count;
+                        }
                     }
                     if (minSize > right-left + 1){
                         minSize = right-left + 1;
@@ -44,10 +45,9 @@ public class MinimumWindowSubstring {
                 }
             }
         }
-        if (minSize > 0){
+        if (minSize <= s.length()){
             return s.substring(minLeft, minLeft+minSize);
         }
         return "";
     }
-
 }
