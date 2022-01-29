@@ -1,4 +1,4 @@
-## Greedy
+# Greedy
 
 | # | Title  | Solution | Difficulty |
 |---| -----  | -------- | ---------- |

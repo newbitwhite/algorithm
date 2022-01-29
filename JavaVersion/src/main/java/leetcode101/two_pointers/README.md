@@ -1,4 +1,4 @@
-## two_pointers
+# two_pointers
 
 | # | Title  | Solution | Difficulty |
 |---| -----  | -------- | ---------- |
