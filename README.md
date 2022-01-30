@@ -24,3 +24,10 @@
 - [归并两个有序数组](JavaVersion/src/main/java/leetcode101/two_pointers/merge_sorted_array)
 - [快慢指针](JavaVersion/src/main/java/leetcode101/two_pointers/linked_list_cycle_ii)
 - [滑动窗口](JavaVersion/src/main/java/leetcode101/two_pointers/minimum_window_substring)
+
+## [Binary Search](JavaVersion/src/main/java/leetcode101/binary_search)
+
+二分查找也常被称为二分法或者折半查找，每次查找时通过将待查找区间分成两部分并只取一部分继续查找，将查找的复杂度大大减少。对于一个长度为O(n)的数组，二分查找的时间复杂度为O(log n)
+
+### 典型题目类型：
+- [求开方](JavaVersion/src/main/java/leetcode101/binary_search/sqrt_x)
