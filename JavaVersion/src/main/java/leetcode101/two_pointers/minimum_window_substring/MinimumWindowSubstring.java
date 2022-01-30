@@ -19,32 +19,32 @@ public class MinimumWindowSubstring {
             statistics.put(tCh, ++tChNums);
         }
         //寻找满足条件的s的子串
-        char[] sChars = s.toCharArray();
         int count = 0;
-        int minSize = sChars.length + 1;
+        int minSize = s.length()+1;
         int minLeft = 0;
         int left = 0;
-        for (int right = 0; right < sChars.length; right++) {
-            if (statistics.containsKey(sChars[right])){
-                ++count;
-                if (statistics.get(sChars[right]) > 0){
-                    statistics.put(sChars[right], statistics.get(sChars[right])-1);
+        for (int right = 0; right < s.length(); right++) {
+            if (statistics.containsKey(s.charAt(right))){
+                if (statistics.get(s.charAt(right)) > 0){
+                    ++count;
                 }
+                statistics.put(s.charAt(right), statistics.get(s.charAt(right))-1);
                 while (count == tChars.length){
-                    if (statistics.containsKey(sChars[left])){
-                        statistics.put(sChars[left], statistics.get(sChars[left])+1);
-                        if (statistics.get(sChars[left]) > 0){
-                            --count;
-                        }
-                    }
                     if (minSize > right-left + 1){
                         minSize = right-left + 1;
                         minLeft = left;
+                    }
+                    if (statistics.containsKey(s.charAt(left))){
+                        statistics.put(s.charAt(left), statistics.get(s.charAt(left))+1);
+                        if(statistics.get(s.charAt(left))>0){
+                            --count;
+                        }
                     }
                     ++left;
                 }
             }
         }
+        System.out.println(minLeft);
         if (minSize <= s.length()){
             return s.substring(minLeft, minLeft+minSize);
         }
