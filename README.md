@@ -32,3 +32,4 @@
 ### 典型题目类型：
 - [求开方](JavaVersion/src/main/java/leetcode101/binary_search/sqrt_x)
 - [查找区间](JavaVersion/src/main/java/leetcode101/binary_search/find_first_and_last_position_of_element_in_sorted_array)
+- [旋转数组查找数字](JavaVersion/src/main/java/leetcode101/binary_search/search_in_rotated_sorted_array_ii)
