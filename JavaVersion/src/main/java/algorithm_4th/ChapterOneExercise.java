@@ -1,4 +1,4 @@
-package algorithm_4th.chapter_one;
+package algorithm_4th;
 
 /**
  * 第一章习题
@@ -6,7 +6,7 @@ package algorithm_4th.chapter_one;
  * @author xiaobai
  * @date 2022-02-06 18:43
  */
-public class Exercise {
+public class ChapterOneExercise {
 
     /**
      * 将一个正整数 N 用二进制表示并转换为一个String类型的值
@@ -21,6 +21,7 @@ public class Exercise {
         }
         return s.reverse().toString();
     }
+
     /**
      * 打印出一个二维布尔数组的内容,其中使用*表示真，空格表示假
      *

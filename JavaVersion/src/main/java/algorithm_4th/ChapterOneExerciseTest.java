@@ -1,17 +1,17 @@
-package algorithm_4th.chapter_one;
+package algorithm_4th;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Random;
 
-class ExerciseTest {
+class ChapterOneExerciseTest {
 
     @Test
     public void test_exercise_1_1_9(){
         int n = new Random().nextInt(10000);
         String expected = Integer.toBinaryString(n);
-        String s = new Exercise().exercise_1_1_9(n);
+        String s = new ChapterOneExercise().exercise_1_1_9(n);
         System.out.println(n);
         System.out.println(s);
         Assertions.assertEquals(expected, s);
@@ -20,19 +20,19 @@ class ExerciseTest {
     @Test
     public void test_exercise_1_1_11(){
         char[][] chars = {{'*', ' ', '*'}, {' ', '*', ' '}, {'*', ' ', '*'}};
-        new Exercise().exercise_1_1_11(chars);
+        new ChapterOneExercise().exercise_1_1_11(chars);
     }
 
     @Test
     public void test_exercise_1_1_13(){
         int[][] ints = {{1,1}, {2,2}, {3,3}};
-        new Exercise().exercise_1_1_13(ints);
+        new ChapterOneExercise().exercise_1_1_13(ints);
     }
 
     @Test
     public void test_exercise_1_1_14(){
         int n = 10;
-        int i = new Exercise().exercise_1_1_14(n);
+        int i = new ChapterOneExercise().exercise_1_1_14(n);
         System.out.println(i);
         Assertions.assertEquals((int)Math.floor(Math.log(n) / Math.log(2)), i);
     }

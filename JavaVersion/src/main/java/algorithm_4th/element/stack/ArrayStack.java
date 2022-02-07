@@ -6,10 +6,11 @@ import java.util.Iterator;
  * 栈 (数组实现)
  * <p>
  * API：push/pop/isEmpty/size
+ *
  * @author xiaobai
  * @date 2022-02-07 00:31
  */
-public class ArrayStack<T> implements Iterable<T>{
+public class ArrayStack<T> implements Iterable<T> {
     private T[] a;
     private int N;
     private static final int DEFAULT_CAP = 10;
@@ -19,6 +20,9 @@ public class ArrayStack<T> implements Iterable<T>{
     }
 
     public ArrayStack(int n) {
+        if (n < 0) {
+            throw new RuntimeException("初始化栈容量参数异常");
+        }
         a = (T[]) new Object[n];
     }
 
@@ -31,10 +35,13 @@ public class ArrayStack<T> implements Iterable<T>{
     }
 
     public T pop() {
+        if (N <= 0) {
+            throw new RuntimeException("空栈！");
+        }
         T item = a[--N];
-        a[N] = null;  // 避免对象游离（请见下节）
-        if (N > 0 && N == a.length/4){
-            resize(a.length/2);
+        a[N] = null;  // 避免对象游离
+        if (N > 0 && N == a.length / 4) {
+            resize(a.length / 2);
         }
         return item;
     }
@@ -56,7 +63,7 @@ public class ArrayStack<T> implements Iterable<T>{
     }
 
     public Iterator<T> iterator() {
-        return new Iterator<T>() {
+        return new Iterator<>() {
             private int i = N;
 
             @Override

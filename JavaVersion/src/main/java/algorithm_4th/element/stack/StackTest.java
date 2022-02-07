@@ -11,9 +11,13 @@ class StackTest {
         ArrayStack<Integer> integerStack = new ArrayStack<>();
         integerStack.push(1);
         integerStack.push(2);
-        integerStack.push(3);
-        integerStack.push(4);
-        integerStack.push(5);
+//        integerStack.push(3);
+//        integerStack.push(4);
+//        integerStack.push(5);
+        integerStack.pop();
+        integerStack.pop();
+        integerStack.pop();
+        integerStack.pop();
         Iterator<Integer> iterator = integerStack.iterator();
         while (iterator.hasNext()) {
             System.out.print(iterator.next());
