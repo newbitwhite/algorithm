@@ -11,7 +11,7 @@ import java.util.LinkedList;
 public class QueueReconstructionByHeight {
 
     public int[][] reconstructQueue(int[][] people) {
-        //sort array people:element[1] min to max, if element[1] eq , element[0] max to min
+        //sort array people:algorithm_4th.element[1] min to max, if algorithm_4th.element[1] eq , algorithm_4th.element[0] max to min
         Arrays.sort(people, (o1, o2) -> {
             int compare = Integer.compare(o2[0], o1[0]);
             if (compare == 0){
@@ -21,7 +21,7 @@ public class QueueReconstructionByHeight {
         });
 
         LinkedList<int[]> list = new LinkedList<>();
-        //two layers of circulation:insert element into reconstructQueue
+        //two layers of circulation:insert algorithm_4th.element into reconstructQueue
         for (int[] person : people) {
             list.add(person[1], person);
         }
