@@ -1,7 +1,5 @@
 package algorithm_4th.element.queue;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Iterator;
 
 /**
@@ -55,7 +53,6 @@ public class LinkedQueue<T> implements Iterable<T>{
         return N == 0;
     }
 
-    @NotNull
     @Override
     public Iterator<T> iterator() {
         return new Iterator<>() {

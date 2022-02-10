@@ -1,7 +1,5 @@
 package algorithm_4th.element.stack;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Iterator;
 
 /**
@@ -49,7 +47,6 @@ public class LinkedStack<T> implements Iterable<T>{
         return N == 0;
     }
 
-    @NotNull
     @Override
     public Iterator<T> iterator() {
         return new Iterator<>() {
