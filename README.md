@@ -1,3 +1,9 @@
+# fundamental
+- [动态数组](JavaVersion/src/main/java/fundamental/dynamic_array)
+- [栈](JavaVersion/src/main/java/fundamental/stack)
+- [队列](JavaVersion/src/main/java/fundamental/queue)
+- [排序（十大常见排序算法实现）](JavaVersion/src/main/java/fundamental/sort)
+
 # LeetCode101
 
 ## [Greedy](JavaVersion/src/main/java/leetcode101/greedy)

@@ -2,11 +2,14 @@ package fundamental.dynamic_array;
 
 import java.util.Arrays;
 
+/**
+ * 动态数组
+ * @author admin
+ */
 public class DynamicArray<T>{
     private static final int DEFAULT_CAPACITY = 10;
-    private static final int CAPACITY_STEP = 10;
-    private int size;
-    private int length;
+
+    private int N;
     private Object[] elementData;
 
     public DynamicArray(){
@@ -14,18 +17,21 @@ public class DynamicArray<T>{
     }
 
     public DynamicArray(int capacity){
-        length = capacity;
         elementData = new Object[capacity];
     }
 
-    public void add(T addVar){
+    public void add(T elem){
         ensureCapacity();
-        elementData[size] = addVar;
-        ++size;
+        elementData[N++] = elem;
     }
 
     public void remove(int index){
-
+        for (int i = index; i < N; i++) {
+            elementData[i] = elementData[i+1];
+        }
+        elementData[N] = null;
+        //数组大小减1
+        N--;
     }
 
     @SuppressWarnings("unchecked")
@@ -33,23 +39,27 @@ public class DynamicArray<T>{
         return (T) elementData[index];
     }
 
-    public void set(int index, T addVar){
-
+    public void set(int index, T elem){
+        if (index > N){
+            throw new RuntimeException("索引越界");
+        }
+        elementData[index] = elem;
     }
 
     public int size(){
-        return size;
+        return N;
+    }
+
+    public boolean isEmpty(){
+        return N == 0;
     }
 
     @SuppressWarnings("unchecked")
     private void ensureCapacity(){
-        if (size >= length){
-            length += CAPACITY_STEP;
-            Object[] ts = new Object[length];
-            for (int i = 0; i < size; i++) {
-                Arrays.copyOf(elementData, length);
-            }
-            elementData = ts;
+        int length = elementData.length;
+        if (N >= length){
+            length *= 2;
+            elementData = Arrays.copyOf(elementData, length);
         }
     }
 }

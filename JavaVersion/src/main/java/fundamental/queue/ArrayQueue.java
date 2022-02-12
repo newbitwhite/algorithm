@@ -44,10 +44,10 @@ public class ArrayQueue<T> implements Iterable<T> {
         //取出队列头元素
         T elem = arr[0];
         //将所有剩余元素向前移动一位
-        for (int i = 0; i < N - 1; i++) {
+        for (int i = 0; i < N; i++) {
             arr[i] = arr[i+1];
         }
-        arr[N-1] = null;
+        arr[N] = null;
         //队列元素数量减1
         N--;
         //队列中元素数量不足数组长度1/4，将数组长度减半
