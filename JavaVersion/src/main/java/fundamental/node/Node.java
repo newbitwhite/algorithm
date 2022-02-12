@@ -1,4 +1,4 @@
-package fundamental;
+package fundamental.node;
 
 /**
  * @author xiaobai
@@ -12,7 +12,7 @@ public class Node<T>{
 
     public Node(Node<T> node) {
         this.item = node.item;
-        if (node.next!= null){
+        if (node.next != null){
             this.next = new Node<>(node.next);
         }
     }
