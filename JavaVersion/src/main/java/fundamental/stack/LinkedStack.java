@@ -1,6 +1,6 @@
 package fundamental.stack;
 
-import algorithm_4th.element.Node;
+import fundamental.Node;
 
 import java.util.Iterator;
 

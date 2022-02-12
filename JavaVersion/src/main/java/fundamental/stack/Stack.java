@@ -1,4 +1,4 @@
-package algorithm_4th.element.stack;
+package fundamental.stack;
 
 /**
  * 栈 (基类)

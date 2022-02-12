@@ -1,4 +1,4 @@
-package algorithm_4th.element;
+package fundamental;
 
 /**
  * @author xiaobai
