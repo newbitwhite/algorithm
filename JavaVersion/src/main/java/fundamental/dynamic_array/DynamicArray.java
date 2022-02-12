@@ -1,4 +1,4 @@
-package algorithm_4th.element.dynamic_array;
+package fundamental.dynamic_array;
 
 import java.util.Arrays;
 

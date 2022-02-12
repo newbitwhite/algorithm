@@ -1,4 +1,4 @@
-package algorithm_4th.element.stack;
+package fundamental.stack;
 
 import algorithm_4th.element.Node;
 

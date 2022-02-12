@@ -9,8 +9,8 @@ class MedianOfTwoSortedArraysTest {
 
     @Test
     public void test_find_median_sorted_arrays(){
-        int[] nums1 = {1,2};
-        int[] nums2 = {3,4};
+        int[] nums1 = {};
+        int[] nums2 = {2,3};
         double expected = 2.5;
         double medianNumber = new MedianOfTwoSortedArrays().findMedianSortedArrays(nums1, nums2);
         System.out.println(medianNumber);
