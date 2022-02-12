@@ -1,4 +1,4 @@
-package algorithm_4th.element.queue;
+package fundamental.queue;
 
 import org.junit.jupiter.api.Test;
 
