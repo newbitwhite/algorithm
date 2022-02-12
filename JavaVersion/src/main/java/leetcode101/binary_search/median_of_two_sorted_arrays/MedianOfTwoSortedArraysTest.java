@@ -3,8 +3,6 @@ package leetcode101.binary_search.median_of_two_sorted_arrays;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class MedianOfTwoSortedArraysTest {
 
     @Test

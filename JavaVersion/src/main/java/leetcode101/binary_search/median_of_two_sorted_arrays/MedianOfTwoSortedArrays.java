@@ -12,17 +12,17 @@ public class MedianOfTwoSortedArrays {
         int len1 = nums1.length;
         int len2 = nums2.length;
         if (len1 == 0) {
-            return len2 % 2 == 0 ? (double) (nums2[len2 / 2 - 1] + nums2[len2 / 2]) / 2 : nums2[len2 / 2];
+            return len2 % 2 == 0 ? (nums2[len2 / 2 - 1] + nums2[len2 / 2]) / 2.0 : nums2[len2 / 2];
         }
         if (len2 == 0) {
-            return len1 % 2 == 0 ? (double) (nums1[len1 / 2 - 1] + nums1[len1 / 2]) / 2 : nums1[len1 / 2];
+            return len1 % 2 == 0 ? (nums1[len1 / 2 - 1] + nums1[len1 / 2]) / 2.0 : nums1[len1 / 2];
         }
         if ((len1 + len2) % 2 == 0) {
             int kthElement1 = getKthElement(nums1, nums2, (len1 + len2) / 2);
-            int kthElement2 = getKthElement(nums1, nums2, (len1 + len2) / 2+1);
+            int kthElement2 = getKthElement(nums1, nums2, (len1 + len2) / 2 + 1);
             return (kthElement1 + kthElement2) / 2.0;
         } else {
-            return getKthElement(nums1, nums2, (len1 + len2) / 2+1);
+            return getKthElement(nums1, nums2, (len1 + len2) / 2 + 1);
         }
     }
 

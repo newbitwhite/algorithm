@@ -5,5 +5,5 @@ package fundamental.sort;
  * @author ：xiaobai
  * @date ：2022/2/12 10:58
  */
-public class Sorter {
+public class RadixSorter {
 }

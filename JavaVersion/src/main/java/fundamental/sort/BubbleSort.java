@@ -5,5 +5,9 @@ package fundamental.sort;
  * @author ：xiaobai
  * @date ：2022/2/12 10:28
  */
-public class BubbleSort {
+public class BubbleSort implements Sort{
+    @Override
+    public void sort(int[] arr) {
+
+    }
 }

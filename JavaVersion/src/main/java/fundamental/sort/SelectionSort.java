@@ -5,5 +5,9 @@ package fundamental.sort;
  * @author ：xiaobai
  * @date ：2022/2/12 10:33
  */
-public class SelectionSort {
+public class SelectionSort implements Sort{
+    @Override
+    public void sort(int[] arr) {
+
+    }
 }

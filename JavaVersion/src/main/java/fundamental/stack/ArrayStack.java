@@ -6,7 +6,8 @@ import java.util.Iterator;
  * 栈 (数组实现)
  * <p>
  * API：push/pop/isEmpty/size
- * 扩展API：peek/copy
+ * <p>
+ * 扩展API：peek
  * @author xiaobai
  * @date 2022-02-07 00:31
  */
