@@ -2,34 +2,25 @@ package algorithm_4th.element.stack;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.*;
-
 class StackTest {
 
     @Test
     public void test_stack() {
-        ArrayStack<Integer> integerStack = new ArrayStack<>();
-        integerStack.push(1);
-        integerStack.push(2);
-//        integerStack.push(3);
-//        integerStack.push(4);
-//        integerStack.push(5);
-        integerStack.pop();
-        integerStack.pop();
-        integerStack.pop();
-        integerStack.pop();
-        Iterator<Integer> iterator = integerStack.iterator();
-        while (iterator.hasNext()) {
-            System.out.print(iterator.next());
+        ArrayStack<String> stack = new ArrayStack<>();
+        String[] strings = {"to", "be", "or", "not", "to", "-", "be", "-", "-", "that", "-", "-", "-", "is"};
+        for (int i = 0; i < strings.length; i++) {
+            if (!strings[i].equals("-")) {
+                stack.push(strings[i]);
+            }else{
+                System.out.println("pop elem: " + stack.pop());
+            }
         }
-        System.out.println();
+        System.out.println("\n*****遍历栈: *****");
+        System.out.println(stack);
+        System.out.println(stack.size() + " left on queue");
 
-
-        ArrayList<Integer> ints = new ArrayList<>(List.of(1, 2, 3, 4, 5));
-        Iterator<Integer> iterator1 = ints.iterator();
-        while (iterator1.hasNext()) {
-            System.out.print(iterator1.next());
-        }
+        ArrayStack<String> copyStack = new ArrayStack<>(stack);
+        System.out.println(copyStack);
     }
 
 }

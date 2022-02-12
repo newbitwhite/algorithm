@@ -6,11 +6,11 @@ import java.util.Iterator;
  * 栈 (数组实现)
  * <p>
  * API：push/pop/isEmpty/size
- *
+ * 扩展API：peek/copy
  * @author xiaobai
  * @date 2022-02-07 00:31
  */
-public class ArrayStack<T> implements Iterable<T> {
+public class ArrayStack<T> implements Stack<T> {
     private T[] a;
     private int N;
     private static final int DEFAULT_CAP = 10;
@@ -26,6 +26,15 @@ public class ArrayStack<T> implements Iterable<T> {
         a = (T[]) new Object[n];
     }
 
+    public ArrayStack(ArrayStack<T> stack) {
+        N = stack.N;
+        a = (T[]) new Object[stack.a.length];
+        for (int i = 0; i < N; i++) {
+            a[i] = stack.a[i];
+        }
+    }
+
+    @Override
     public void push(T item) {
         if (a.length == N) {
             resize(2 * a.length);
@@ -34,6 +43,19 @@ public class ArrayStack<T> implements Iterable<T> {
         a[N++] = item;
     }
 
+    /**
+     * 返回栈中最近添加的元素（而不弹出它）。
+     * @return T
+     */
+    @Override
+    public T peek() {
+        if (N <= 0) {
+            throw new RuntimeException("空栈！");
+        }
+        return a[N];
+    }
+
+    @Override
     public T pop() {
         if (N <= 0) {
             throw new RuntimeException("空栈！");
@@ -46,10 +68,12 @@ public class ArrayStack<T> implements Iterable<T> {
         return item;
     }
 
+    @Override
     public int size() {
         return N;
     }
 
+    @Override
     public boolean isEmpty() {
         return N == 0;
     }
@@ -62,6 +86,7 @@ public class ArrayStack<T> implements Iterable<T> {
         a = newA;
     }
 
+    @Override
     public Iterator<T> iterator() {
         return new Iterator<>() {
             private int i = N;
@@ -76,5 +101,20 @@ public class ArrayStack<T> implements Iterable<T> {
                 return a[--i];
             }
         };
+    }
+
+    @Override
+    public String toString() {
+        System.out.println("ArrayStack的toString方法");
+        String s = "[";
+        Iterator<T> iterator = this.iterator();
+        while (iterator.hasNext()){
+            s += iterator.next().toString();
+            if (iterator.hasNext()){
+                s += ", ";
+            }
+        }
+        s += "]";
+        return s;
     }
 }

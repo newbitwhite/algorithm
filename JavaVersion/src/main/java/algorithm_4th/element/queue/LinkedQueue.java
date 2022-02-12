@@ -1,5 +1,7 @@
 package algorithm_4th.element.queue;
 
+import algorithm_4th.element.Node;
+
 import java.util.Iterator;
 
 /**
@@ -10,19 +12,13 @@ import java.util.Iterator;
  * @date 2022-02-08 00:01
  */
 public class LinkedQueue<T> implements Iterable<T>{
-    private Node first;
-    private Node last;
+    private Node<T> first;
+    private Node<T> last;
     private int N;
 
-
-    private class Node{
-        private T item;
-        private Node next;
-    }
-
     public void enqueue(T elem) {
-        Node oldLast = last;
-        last = new Node();
+        Node<T> oldLast = last;
+        last = new Node<>();
         last.item = elem;
         if (N == 0){
             first = last;
@@ -36,7 +32,7 @@ public class LinkedQueue<T> implements Iterable<T>{
         if (N <= 0) {
             throw new RuntimeException("空队列！");
         }
-        Node oldFirst = first;
+        Node<T> oldFirst = first;
         first = first.next;
         N--;
         if (N == 0){
@@ -56,7 +52,7 @@ public class LinkedQueue<T> implements Iterable<T>{
     @Override
     public Iterator<T> iterator() {
         return new Iterator<>() {
-            private Node node = first;
+            private Node<T> node = first;
 
             @Override
             public T next() {
@@ -70,7 +66,20 @@ public class LinkedQueue<T> implements Iterable<T>{
                 return node != null;
             }
 
-
         };
+    }
+
+    @Override
+    public String toString() {
+        String s = "[";
+        Iterator<T> iterator = this.iterator();
+        while (iterator.hasNext()){
+            s += iterator.next().toString();
+            if (iterator.hasNext()){
+                s += ", ";
+            }
+        }
+        s += "]";
+        return s;
     }
 }

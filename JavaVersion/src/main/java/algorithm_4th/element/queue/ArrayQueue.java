@@ -1,5 +1,6 @@
 package algorithm_4th.element.queue;
 
+import java.util.Arrays;
 import java.util.Iterator;
 
 /**
@@ -87,5 +88,10 @@ public class ArrayQueue<T> implements Iterable<T> {
                 return arr[i++];
             }
         };
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(arr);
     }
 }

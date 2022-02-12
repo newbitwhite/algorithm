@@ -15,9 +15,7 @@ class QueueTest {
             }
         }
         System.out.println("\n*****遍历队列: *****");
-        for (String s: queue) {
-            System.out.println(s);
-        }
+        System.out.println(queue);
         System.out.println(queue.size() + " left on queue");
     }
 }
