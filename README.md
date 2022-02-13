@@ -1,4 +1,4 @@
-#[algorithm_4th](JavaVersion/src/main/java/algorithm_4th) (《算法4》部分课后习题题解)
+# [algorithm_4th](JavaVersion/src/main/java/algorithm_4th) (《算法4》部分课后习题题解)
 
 # [fundamental](JavaVersion/src/main/java/fundamental) (基础数据结构与算法的实现)
 - [数组](JavaVersion/src/main/java/fundamental/array)
