@@ -1,10 +1,14 @@
-# fundamental
-- [动态数组](JavaVersion/src/main/java/fundamental/dynamic_array)
+#[algorithm_4th](JavaVersion/src/main/java/algorithm_4th) (《算法4》部分课后习题题解)
+
+# [fundamental](JavaVersion/src/main/java/fundamental) (基础数据结构与算法的实现)
+- [数组](JavaVersion/src/main/java/fundamental/array)
+- [链表](JavaVersion/src/main/java/fundamental/linked)
 - [栈](JavaVersion/src/main/java/fundamental/stack)
 - [队列](JavaVersion/src/main/java/fundamental/queue)
-- [排序（十大常见排序算法实现）](JavaVersion/src/main/java/fundamental/sort)
 
-# LeetCode101
+[comment]: <> (- [排序（十大常见排序算法实现）]&#40;JavaVersion/src/main/java/fundamental/sort&#41;)
+
+# [LeetCode101](JavaVersion/src/main/java/leetcode101) (LeetCode101题解)
 
 ## [Greedy](JavaVersion/src/main/java/leetcode101/greedy)
 
