@@ -1,6 +1,6 @@
 package fundamental.queue;
 
-import fundamental.node.Node;
+import fundamental.linked.Node;
 
 import java.util.Iterator;
 

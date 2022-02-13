@@ -1,4 +1,4 @@
-package fundamental.dynamic_array;
+package fundamental.array;
 
 import java.util.Arrays;
 

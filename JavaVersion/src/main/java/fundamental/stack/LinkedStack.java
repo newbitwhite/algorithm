@@ -1,6 +1,6 @@
 package fundamental.stack;
 
-import fundamental.node.Node;
+import fundamental.linked.Node;
 
 import java.util.Iterator;
 
@@ -21,8 +21,16 @@ public class LinkedStack<T> implements Stack<T>{
     }
 
     public LinkedStack(LinkedStack<T> stack) {
-        top = new Node<>(stack.top);
-        N = stack.N;
+        if (!stack.isEmpty()){
+            top = new Node<>(stack.top);
+            Node<T> node = top;
+            while (node.next != null){
+                node.next = new Node<>(node.next);
+                node = node.next;
+            }
+            N = stack.N;
+        }
+
     }
 
     @Override
