@@ -1,6 +1,6 @@
 package fundamental.stack;
 
-import fundamental.linked.Node;
+import fundamental.node.Node;
 
 import java.util.Iterator;
 

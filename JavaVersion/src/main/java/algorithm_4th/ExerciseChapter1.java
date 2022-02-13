@@ -1,6 +1,7 @@
 package algorithm_4th;
 
-import fundamental.linked.Node;
+import fundamental.node.Node;
+import fundamental.queue.CircularLinkedListQueue;
 
 /**
  *
@@ -116,5 +117,29 @@ public class ExerciseChapter1<T> {
         return key.equals(node.item);
     }
 
+    /**
+     * 1.3.29　用环形链表实现Queue。环形链表也是一条链表，只是没有任何结点的链接为空，且只要链表非空则 last.next 的值为 first。只能使用一个 Node 类型的实例变量（last）。
+     */
+    public static <T> void $1_3_29(){
+        //见下：CircularLinkedListQueue类
+        new CircularLinkedListQueue<T>();
+    }
 
+    /**
+     * 1.3.30　编写一个函数，接受一条链表的首结点作为参数，（破坏性地）将链表反转并返回结果链表的首结点。
+     * @param head  头节点
+     * @return 链表反转后的头节点
+     */
+    public static <T> Node<T> $1_3_30(Node<T> head){
+        Node<T> prevNode = null;
+        Node<T> node = head;
+        Node<T> nextNode;
+        while (node != null){
+            nextNode = node.next;
+            node.next = prevNode;
+            prevNode = node;
+            node = nextNode;
+        }
+        return prevNode;
+    }
 }

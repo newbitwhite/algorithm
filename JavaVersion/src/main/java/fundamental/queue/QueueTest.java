@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 class QueueTest {
     @Test
     public void test_queue(){
-        LinkedQueue<String> queue = new LinkedQueue<>();
+        CircularLinkedListQueue<String> queue = new CircularLinkedListQueue<>();
         String[] strings = {"to", "be", "or", "not", "to", "-", "be", "-", "-", "that", "-", "-", "-", "is"};
         for (int i = 0; i < strings.length; i++) {
             if (!strings[i].equals("-")) {

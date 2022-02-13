@@ -5,14 +5,13 @@ import fundamental.node.Node;
 import java.util.Iterator;
 
 /**
- * 队列 （链表实现）
+ * 队列 （循环链表实现）
  * <p>
  * API: isEmpty/size/enqueue/dequeue
  * @author xiaobai
- * @date 2022-02-08 00:01
+ * @date 2022-02-13 22:50
  */
-public class LinkedQueue<T> implements Iterable<T>{
-    private Node<T> first;
+public class CircularLinkedListQueue<T> implements Iterable<T>{
     private Node<T> last;
     private int N;
 
@@ -21,8 +20,9 @@ public class LinkedQueue<T> implements Iterable<T>{
         last = new Node<>();
         last.item = elem;
         if (N == 0){
-            first = last;
+            last.next = last;
         } else{
+            last.next = oldLast.next;
             oldLast.next = last;
         }
         N++;
@@ -32,11 +32,12 @@ public class LinkedQueue<T> implements Iterable<T>{
         if (N <= 0) {
             throw new RuntimeException("空队列！");
         }
-        Node<T> oldFirst = first;
-        first = first.next;
+        Node<T> oldFirst = last.next;
         N--;
         if (N == 0){
             last = null;
+        }else{
+            last.next = oldFirst.next;
         }
         return oldFirst.item;
     }
@@ -52,18 +53,20 @@ public class LinkedQueue<T> implements Iterable<T>{
     @Override
     public Iterator<T> iterator() {
         return new Iterator<>() {
-            private Node<T> node = first;
+            private int i = N;
+            private Node<T> node = last;
 
             @Override
             public T next() {
-                T elem = node.item;
+                T elem = node.next.item;
                 node = node.next;
+                i--;
                 return elem;
             }
 
             @Override
             public boolean hasNext() {
-                return node != null;
+                return i > 0;
             }
 
         };

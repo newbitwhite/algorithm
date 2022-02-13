@@ -1,18 +1,24 @@
 package fundamental.linked;
 
+import fundamental.node.Node;
+
 import java.util.Iterator;
 
 /**
  * 链表
+ * <P>
+ *     API: add/remove/isEmpty/size
+ * </P>
  * @author xiaobai
  * @date 2022-02-13 17:23
  */
-public class Linked<T> implements Iterable<T>{
+public class LinkedList<T> implements Iterable<T>{
     private Node<T> head;
     private int N;
 
     public void add(T elem){
         if (N == 0){
+            head = new Node<>();
             head.item = elem;
         }else{
             Node<T> node = head;
@@ -44,6 +50,14 @@ public class Linked<T> implements Iterable<T>{
         return removeNode;
     }
 
+    public boolean isEmpty(){
+        return N==0;
+    }
+
+    public int size(){
+        return N;
+    }
+
     @Override
     public Iterator<T> iterator() {
         return new Iterator<>() {
@@ -64,5 +78,16 @@ public class Linked<T> implements Iterable<T>{
         };
     }
 
-
+    @Override
+    public String toString() {
+        String s = "";
+        Iterator<T> iterator = this.iterator();
+        while (iterator.hasNext()){
+            s += iterator.next().toString();
+            if (iterator.hasNext()){
+                s += "->";
+            }
+        }
+        return s;
+    }
 }

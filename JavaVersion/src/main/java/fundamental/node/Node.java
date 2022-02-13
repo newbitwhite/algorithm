@@ -1,4 +1,4 @@
-package fundamental.linked;
+package fundamental.node;
 
 /**
  * @author xiaobai
