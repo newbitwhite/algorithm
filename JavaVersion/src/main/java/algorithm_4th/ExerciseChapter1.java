@@ -1,6 +1,7 @@
 package algorithm_4th;
 
 import fundamental.node.Node;
+import fundamental.queue.ArrayQueue;
 import fundamental.queue.CircularLinkedListQueue;
 import fundamental.queue.LinkedListDeque;
 import fundamental.queue.LinkedListSteque;
@@ -160,5 +161,23 @@ public class ExerciseChapter1<T> {
     public static <T> void $1_3_33(){
         //见下：LinkedListDeque类
         new LinkedListDeque<T>();
+    }
+
+    /**
+     * 1.3.37　Josephus 问题。在这个古老的问题中，N 个身陷绝境的人一致同意通过以下方式减少生存人数。他们围坐成一圈（位置记为 0 到 N-1）并从第一个人开始报数，报到 M 的人会被杀死，直到最后一个人留下来。传说中 Josephus 找到了不会被杀死的位置。编写一个 Queue 的用例 Josephus，从命令行接受N 和M 并打印出人们被杀死的顺序（这也将显示 Josephus 在圈中的位置）。
+     */
+    public static void $1_3_37(int n, int m){
+        ArrayQueue<Integer> queue = new ArrayQueue<>();
+        for (int i = 0; i < n; i++) {
+            queue.enqueue(i);
+        }
+        System.out.print("顺序：");
+        while (!queue.isEmpty()) {
+            for (int i = 0; i < m-1; i++){
+                queue.enqueue(queue.dequeue());
+            }
+            System.out.print(queue.dequeue() + " ");
+        }
+        System.out.println();
     }
 }

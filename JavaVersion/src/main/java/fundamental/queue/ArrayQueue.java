@@ -1,6 +1,5 @@
 package fundamental.queue;
 
-import java.util.Arrays;
 import java.util.Iterator;
 
 /**
@@ -34,7 +33,7 @@ public class ArrayQueue<T> implements Iterable<T> {
             resize(arr.length * 2);
         }
         arr[N++] = elem;
-        System.out.println("queue["+ N +"]: " + elem);
+//        System.out.println("queue["+ N +"]: " + elem);
     }
 
     public T dequeue() {
@@ -44,10 +43,10 @@ public class ArrayQueue<T> implements Iterable<T> {
         //取出队列头元素
         T elem = arr[0];
         //将所有剩余元素向前移动一位
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < N - 1; i++) {
             arr[i] = arr[i+1];
         }
-        arr[N] = null;
+        arr[N - 1] = null;
         //队列元素数量减1
         N--;
         //队列中元素数量不足数组长度1/4，将数组长度减半
@@ -92,6 +91,15 @@ public class ArrayQueue<T> implements Iterable<T> {
 
     @Override
     public String toString() {
-        return Arrays.toString(arr);
+        String s = "[";
+        Iterator<T> iterator = this.iterator();
+        while (iterator.hasNext()){
+            s += iterator.next().toString();
+            if (iterator.hasNext()){
+                s += ", ";
+            }
+        }
+        s += "]";
+        return s;
     }
 }
