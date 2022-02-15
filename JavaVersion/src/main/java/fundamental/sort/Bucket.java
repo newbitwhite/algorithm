@@ -5,9 +5,8 @@ package fundamental.sort;
  * @author ：xiaobai
  * @date ：2022/2/12 10:57
  */
-public class BucketSort implements Sort{
-    @Override
-    public void sort(int[] arr) {
-
+@SuppressWarnings("all")
+public class Bucket {
+    public static void sort(Comparable[] arr) {
     }
 }

@@ -5,9 +5,9 @@ package fundamental.sort;
  * @author ：xiaobai
  * @date ：2022/2/12 10:56
  */
-public class Heapsort implements Sort{
-    @Override
-    public void sort(int[] arr) {
+@SuppressWarnings("all")
+public class Heap{
 
+    public static void sort(Comparable[] arr) {
     }
 }

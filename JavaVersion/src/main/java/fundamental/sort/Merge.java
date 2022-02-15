@@ -5,9 +5,9 @@ package fundamental.sort;
  * @author ：xiaobai
  * @date ：2022/2/12 10:36
  */
-public class MergeSort implements Sort{
-    @Override
-    public void sort(int[] arr) {
+@SuppressWarnings("all")
+public class Merge{
 
+    public static void sort(Comparable[] arr) {
     }
 }
