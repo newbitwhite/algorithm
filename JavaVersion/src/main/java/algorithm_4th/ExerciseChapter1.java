@@ -179,5 +179,6 @@ public class ExerciseChapter1<T> {
             System.out.print(queue.dequeue() + " ");
         }
         System.out.println();
+
     }
 }
