@@ -45,4 +45,9 @@ class ExerciseChapter1Test {
             node1 = node1.next;
         }
     }
+
+    @Test
+    public void test_1_3_37(){
+        ExerciseChapter1.$1_3_37(7, 2);
+    }
 }

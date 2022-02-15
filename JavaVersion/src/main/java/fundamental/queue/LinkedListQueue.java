@@ -11,7 +11,7 @@ import java.util.Iterator;
  * @author xiaobai
  * @date 2022-02-08 00:01
  */
-public class LinkedQueue<T> implements Iterable<T>{
+public class LinkedListQueue<T> implements Iterable<T>{
     private Node<T> first;
     private Node<T> last;
     private int N;

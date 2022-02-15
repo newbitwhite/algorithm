@@ -1,7 +1,10 @@
 package algorithm_4th;
 
 import fundamental.node.Node;
+import fundamental.queue.ArrayQueue;
 import fundamental.queue.CircularLinkedListQueue;
+import fundamental.queue.LinkedListDeque;
+import fundamental.queue.LinkedListSteque;
 
 /**
  *
@@ -141,5 +144,40 @@ public class ExerciseChapter1<T> {
             node = nextNode;
         }
         return prevNode;
+    }
+
+    /**
+     * 1.3.32　LinkedListSteque。一个以栈为目标的队列（或称 LinkedListSteque），是一种支持 push、pop 和 enqueue 操作的数据类型。为这种抽象数据类型定义一份 API 并给出一份基于链表的实现。
+     * push、pop 都是对队列同一端的操作，enqueue 和 push 对应，但操作的是队列的另一端。
+     */
+    public static <T> void $1_3_32(){
+        //见下：LinkedListSteque类
+        new LinkedListSteque<T>();
+    }
+
+    /**
+     * 1.3.33　LinkedListDeque。一个双向队列（或者称为 LinkedListDeque）和栈或队列类似，但它同时支持在两端添加或删除元素。
+     */
+    public static <T> void $1_3_33(){
+        //见下：LinkedListDeque类
+        new LinkedListDeque<T>();
+    }
+
+    /**
+     * 1.3.37　Josephus 问题。在这个古老的问题中，N 个身陷绝境的人一致同意通过以下方式减少生存人数。他们围坐成一圈（位置记为 0 到 N-1）并从第一个人开始报数，报到 M 的人会被杀死，直到最后一个人留下来。传说中 Josephus 找到了不会被杀死的位置。编写一个 Queue 的用例 Josephus，从命令行接受N 和M 并打印出人们被杀死的顺序（这也将显示 Josephus 在圈中的位置）。
+     */
+    public static void $1_3_37(int n, int m){
+        ArrayQueue<Integer> queue = new ArrayQueue<>();
+        for (int i = 0; i < n; i++) {
+            queue.enqueue(i);
+        }
+        System.out.print("顺序：");
+        while (!queue.isEmpty()) {
+            for (int i = 0; i < m-1; i++){
+                queue.enqueue(queue.dequeue());
+            }
+            System.out.print(queue.dequeue() + " ");
+        }
+        System.out.println();
     }
 }
