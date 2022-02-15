@@ -1,6 +1,7 @@
 package fundamental.sort;
 
 /**
+ * 排序工具类
  * @author xiaobai
  * @program: algorithm
  * @description

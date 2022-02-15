@@ -5,8 +5,7 @@
 - [链表](JavaVersion/src/main/java/fundamental/linked)
 - [栈](JavaVersion/src/main/java/fundamental/stack)
 - [队列](JavaVersion/src/main/java/fundamental/queue)
-
-[comment]: <> (- [排序（十大常见排序算法实现）]&#40;JavaVersion/src/main/java/fundamental/sort&#41;)
+- [排序（十大常见排序算法实现）](JavaVersion/src/main/java/fundamental/sort)
 
 # [LeetCode101](JavaVersion/src/main/java/leetcode101) (LeetCode101题解)
 
