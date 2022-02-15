@@ -1,17 +1,36 @@
 # 队列
+
+## 迭代版本
+
 1. 实现一个单一类型固定的栈
 2. **支持泛型**
 3. **支持迭代**
 
-## 队列的数组实现 (ArrayQueue)
+## API
+- void enqueue(T elem): 从尾部添加元素
+- T dequeue(): 从头部删除元素
+- int size(): 队列元素数量
+- boolean isEmpty(): 队列是否为空
+
+## 实现
+
+### 队列的数组实现 (ArrayQueue)
 - 动态调整数组容量
 
-## 队列的链表实现 (LinkedQueue)
-思路基本同数组实现一样，支持泛型和迭代，链表实现不需要数组实现那样的动态扩容机制
+### 队列的链表实现 (LinkedQueue)
+- 链表实现不需要数组实现那样的动态扩容机制
 
-### 用链表达到了最优设计目标：
+#### 用链表达到了最优设计目标：
 1. 它可以处理任意类型的数据（支持泛型）
 2. 所需的空间总是和集合的大小成正比（不需要数组实现那样的动态扩容机制）
 3. 操作所需的时间总是和集合的大小无关（总是O(1)的时间复杂度）
 
-## 环形链表实现队列 (CircularLinkedListQueue)
+### 环形链表实现队列 (CircularLinkedListQueue)
+
+### 双向队列：链表实现 （LinkedListDeque）
+- 支持两端添加和删除元素
+- API: pushLeft、popLeft、pushRight、popRight
+
+### 一个以栈为目标的队列(或称 LinkedListSteque)
+- 支持两端添加元素，一端删除元素，双向队列去掉一个删除操作。
+- API: push、pop、enqueue

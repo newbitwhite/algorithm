@@ -2,6 +2,8 @@ package algorithm_4th;
 
 import fundamental.node.Node;
 import fundamental.queue.CircularLinkedListQueue;
+import fundamental.queue.LinkedListDeque;
+import fundamental.queue.LinkedListSteque;
 
 /**
  *
@@ -141,5 +143,22 @@ public class ExerciseChapter1<T> {
             node = nextNode;
         }
         return prevNode;
+    }
+
+    /**
+     * 1.3.32　Steque。一个以栈为目标的队列（或称 steque），是一种支持 push、pop 和 enqueue 操作的数据类型。为这种抽象数据类型定义一份 API 并给出一份基于链表的实现。
+     * push、pop 都是对队列同一端的操作，enqueue 和 push 对应，但操作的是队列的另一端。
+     */
+    public static <T> void $1_3_32(){
+        //见下：LinkedListSteque类
+        new LinkedListSteque<T>();
+    }
+
+    /**
+     * 1.3.33　Deque。一个双向队列（或者称为 deque）和栈或队列类似，但它同时支持在两端添加或删除元素。
+     */
+    public static <T> void $1_3_33(){
+        //见下：LinkedListDeque类
+        new LinkedListDeque<T>();
     }
 }
