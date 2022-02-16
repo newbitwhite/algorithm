@@ -1,4 +1,4 @@
-package fundamental.sort;
+package fundamental.sort.Utils;
 
 /**
  * 排序工具类
@@ -17,6 +17,10 @@ public class Util {
         Comparable t = a[i];
         a[i] = a[j];
         a[j] = t;
+    }
+
+    public static void assign(Comparable[] a, int i, int j) {
+        a[i] = a[j];
     }
 
     public static void show(Comparable[] a) {  // 在单行中打印数组
