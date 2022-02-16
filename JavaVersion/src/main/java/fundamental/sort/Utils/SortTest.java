@@ -1,24 +1,41 @@
 package fundamental.sort.Utils;
 
 import fundamental.sort.*;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 @SuppressWarnings("all")
 class SortTest {
     @Test
     public void test_sort() {
-        String alg1 = "Insertion";
-        String alg2 = "Selection";
-        int N = 500;
-        int T = 500;
+        String alg1 = "Shell";
+        String alg2 = "Insertion";
+        int N = 15;
+        int T = 10;
         // 算法 1 的总时间
         double t1 = timeRandomInput(alg1, N, T);
         // 算法 2 的总时间
         double t2 = timeRandomInput(alg2, N, T);
-
         System.out.println(String.format("For %d random Doubles\n %s is", N, alg1));
         System.out.print(String.format(" %.1f times faster than %s\n",t2 / t1, alg2));
+    }
 
+    /**
+     *使用算法 alg 将 T 个长度为 N 的数组排序
+     */
+    public static double timeRandomInput(String alg, int N, int T) {
+        double total = 0.0;
+        Double[] a = new Double[N];
+        // 进行一次测试(生成一个数组并排序)
+        for (int t = 0; t < T; t++) {
+            for (int i = 0; i < N; i++) {
+                a[i] = Math.random();
+            }
+            total += time(alg, a);
+            //断言数组是否有序
+            Assertions.assertTrue(Util.isSorted(a));
+        }
+        return total;
     }
 
     public static double time(String alg, Double[] a) {
@@ -42,22 +59,6 @@ class SortTest {
             Heap.sort(a);
         }
         return timer.elapsedTime();
-    }
-
-    /**
-     *使用算法 alg 将 T 个长度为 N 的数组排序
-     */
-    public static double timeRandomInput(String alg, int N, int T) {
-        double total = 0.0;
-        Double[] a = new Double[N];
-        // 进行一次测试(生成一个数组并排序)
-        for (int t = 0; t < T; t++) {
-            for (int i = 0; i < N; i++) {
-                a[i] = Math.random();
-            }
-            total += time(alg, a);
-        }
-        return total;
     }
 }
 

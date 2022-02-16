@@ -12,13 +12,11 @@ public class Insertion{
     public static void sort(Comparable[] arr) {
         int N = arr.length;
         for (int i = 1; i < N; i++) {
-            int j = i;
-            Comparable current = arr[i];
-            while (j > 0 && Util.less(current, arr[j-1])) {
-                Util.assign(arr, j, j-1);
-                j--;
+            for (int j = i; j > 0; j--) {
+                if(Util.less(arr[j], arr[j-1])){
+                    Util.exch(arr, j, j-1);
+                }
             }
-            arr[j] = current;
         }
         Util.show(arr);
     }
