@@ -1,6 +1,6 @@
-package fundamental.sort;
+package fundamental.sort.impl;
 
-import fundamental.sort.Utils.Util;
+import fundamental.sort.test.Util;
 
 /**
  * 选择排序
@@ -23,6 +23,6 @@ public class Selection{
             //将当前元素和最小元素交换位置
             Util.exch(arr, i, minIndex);
         }
-        Util.show(arr);
+//        Util.show(arr);
     }
 }

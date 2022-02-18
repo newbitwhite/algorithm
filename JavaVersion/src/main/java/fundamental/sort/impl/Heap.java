@@ -1,12 +1,12 @@
-package fundamental.sort;
+package fundamental.sort.impl;
 
 /**
- * 基数排序
+ * 堆排序
  * @author ：xiaobai
- * @date ：2022/2/12 10:58
+ * @date ：2022/2/12 10:56
  */
 @SuppressWarnings("all")
-public class Radix{
+public class Heap{
 
     public static void sort(Comparable[] arr) {
     }

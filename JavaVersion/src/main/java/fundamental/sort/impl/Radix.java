@@ -1,13 +1,12 @@
-package fundamental.sort;
+package fundamental.sort.impl;
 
 /**
- * 快速排序
- *
+ * 基数排序
  * @author ：xiaobai
- * @date ：2022/2/12 10:56
+ * @date ：2022/2/12 10:58
  */
 @SuppressWarnings("all")
-public class Quick{
+public class Radix{
 
     public static void sort(Comparable[] arr) {
     }

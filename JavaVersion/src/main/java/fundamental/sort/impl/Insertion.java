@@ -1,6 +1,6 @@
-package fundamental.sort;
+package fundamental.sort.impl;
 
-import fundamental.sort.Utils.Util;
+import fundamental.sort.test.Util;
 
 /**
  * 插入排序
@@ -18,6 +18,6 @@ public class Insertion{
                 }
             }
         }
-        Util.show(arr);
+//        Util.show(arr);
     }
 }

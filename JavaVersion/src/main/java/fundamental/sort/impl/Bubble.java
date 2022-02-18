@@ -1,4 +1,4 @@
-package fundamental.sort;
+package fundamental.sort.impl;
 
 /**
  * 冒泡排序

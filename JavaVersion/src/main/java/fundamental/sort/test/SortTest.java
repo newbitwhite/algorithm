@@ -1,6 +1,6 @@
-package fundamental.sort.Utils;
+package fundamental.sort.test;
 
-import fundamental.sort.*;
+import fundamental.sort.impl.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

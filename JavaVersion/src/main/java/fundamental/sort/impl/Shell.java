@@ -1,6 +1,6 @@
-package fundamental.sort;
+package fundamental.sort.impl;
 
-import fundamental.sort.Utils.Util;
+import fundamental.sort.test.Util;
 
 /**
  * 希尔排序: 递减增量排序算法
@@ -9,7 +9,6 @@ import fundamental.sort.Utils.Util;
  */
 @SuppressWarnings("all")
 public class Shell {
-
     public static void sort(Comparable[] arr) {
         int N = arr.length;
         if (N <= 1){
@@ -26,6 +25,6 @@ public class Shell {
                 }
             }
         }
-        Util.show(arr);
+//        Util.show(arr);
     }
 }

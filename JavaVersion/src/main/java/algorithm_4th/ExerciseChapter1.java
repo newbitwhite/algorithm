@@ -7,7 +7,7 @@ import fundamental.queue.LinkedListDeque;
 import fundamental.queue.LinkedListSteque;
 
 /**
- *
+ *《算法4》第一章-基础 习题题解
  * @author ：xiaobai
  * @date ：2022/2/12 16:24
  */

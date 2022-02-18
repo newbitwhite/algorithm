@@ -1,7 +1,7 @@
 # 排序
 
 ## 十大排序算法比较图
-![image](Utils/sort.png)
+![image](sort.png)
 
 ## 迭代版本
 1. 两个基础排序【选择排序 (Quick)、插入排序 (Selection)】

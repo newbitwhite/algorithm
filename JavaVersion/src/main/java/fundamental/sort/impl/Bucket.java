@@ -1,13 +1,12 @@
-package fundamental.sort;
+package fundamental.sort.impl;
 
 /**
- * 堆排序
+ * 桶排序
  * @author ：xiaobai
- * @date ：2022/2/12 10:56
+ * @date ：2022/2/12 10:57
  */
 @SuppressWarnings("all")
-public class Heap{
-
+public class Bucket {
     public static void sort(Comparable[] arr) {
     }
 }

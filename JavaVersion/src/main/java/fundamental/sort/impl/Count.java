@@ -1,4 +1,4 @@
-package fundamental.sort;
+package fundamental.sort.impl;
 
 /**
  * 计数排序

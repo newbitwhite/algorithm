@@ -1,6 +1,6 @@
-package fundamental.sort;
+package fundamental.sort.impl;
 
-import fundamental.sort.Utils.Util;
+import fundamental.sort.test.Util;
 
 /**
  * 归并排序

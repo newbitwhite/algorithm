@@ -1,12 +1,14 @@
-package fundamental.sort;
+package fundamental.sort.impl;
 
 /**
- * 桶排序
+ * 快速排序
+ *
  * @author ：xiaobai
- * @date ：2022/2/12 10:57
+ * @date ：2022/2/12 10:56
  */
 @SuppressWarnings("all")
-public class Bucket {
+public class Quick{
+
     public static void sort(Comparable[] arr) {
     }
 }

@@ -5,7 +5,7 @@ import fundamental.node.Node;
 import java.util.Iterator;
 
 /**
- * 一个以栈为目标的队列
+ * 栈队列
  * <p>
  *     API: push、pop、enqueue、size、isEmpty
  * </p>

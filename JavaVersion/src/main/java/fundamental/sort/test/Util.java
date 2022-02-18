@@ -1,4 +1,4 @@
-package fundamental.sort.Utils;
+package fundamental.sort.test;
 
 /**
  * 排序工具类
