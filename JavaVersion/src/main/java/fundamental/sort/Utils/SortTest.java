@@ -8,9 +8,9 @@ import org.junit.jupiter.api.Test;
 class SortTest {
     @Test
     public void test_sort() {
-        String alg1 = "Shell";
+        String alg1 = "Merge";
         String alg2 = "Insertion";
-        int N = 15;
+        int N = 14;
         int T = 10;
         // 算法 1 的总时间
         double t1 = timeRandomInput(alg1, N, T);
