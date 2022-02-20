@@ -8,10 +8,10 @@ import org.junit.jupiter.api.Test;
 class SortTest {
     @Test
     public void test_sort() {
-        String alg1 = "Merge";
+        String alg1 = "Quick";
         String alg2 = "Insertion";
-        int N = 14;
-        int T = 10;
+        int N = 100000;
+        int T = 1;
         // 算法 1 的总时间
         double t1 = timeRandomInput(alg1, N, T);
         // 算法 2 的总时间

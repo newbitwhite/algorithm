@@ -27,10 +27,22 @@
 
 ### 环形链表实现队列 (CircularLinkedListQueue)
 
-### 双向队列：链表实现 （LinkedListDeque）
+### 双向队列：链表实现 (LinkedListDeque)
 - 支持两端添加和删除元素
 - API: pushLeft、popLeft、pushRight、popRight
 
-### 一个以栈为目标的队列(或称 LinkedListSteque)
+### 栈队列 (LinkedListSteque)
 - 支持两端添加元素，一端删除元素，双向队列去掉一个删除操作。
 - API: push、pop、enqueue
+
+### 优先队列 (MaxPriorityQueue)
+- 支持删除最大元素和插入元素。这种数据类型叫做优先队列
+- API
+  - MaxPriorityQueue() 创建一个优先队列
+  - MaxPriorityQueue(int max) 创建一个初始容量为 max 的优先队列
+  - MaxPriorityQueue(Key[] a) 用 a[] 中的元素创建一个优先队列 
+  - void Insert(Key v) 向优先队列中插入一个元素
+  - Key max() 返回最大元素
+  - Key delMax() 删除并返回最大元素
+  - boolean isEmpty() 返回队列是否为空
+  - int size() 返回优先队列中的元素个数
