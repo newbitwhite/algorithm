@@ -8,9 +8,9 @@ import org.junit.jupiter.api.Test;
 class SortTest {
     @Test
     public void test_sort() {
-        String alg1 = "Quick";
+        String alg1 = "Bubble";
         String alg2 = "Insertion";
-        int N = 100000;
+        int N = 10;
         int T = 1;
         // 算法 1 的总时间
         double t1 = timeRandomInput(alg1, N, T);
@@ -51,6 +51,9 @@ class SortTest {
         }
         if (alg.equals("Merge")) {
             Merge.sort(a);
+        }
+        if (alg.equals("Bubble")) {
+            Bubble.sort(a);
         }
         if (alg.equals("Quick")) {
             Quick.sort(a);

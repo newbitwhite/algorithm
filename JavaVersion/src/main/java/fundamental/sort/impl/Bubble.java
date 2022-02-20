@@ -1,5 +1,7 @@
 package fundamental.sort.impl;
 
+import fundamental.sort.test.Util;
+
 /**
  * 冒泡排序
  * @author ：xiaobai
@@ -8,5 +10,14 @@ package fundamental.sort.impl;
 @SuppressWarnings("all")
 public class Bubble{
 
-    public static void sort(Comparable[] a) {}
+    public static void sort(Comparable[] a) {
+        for (int i = 0; i < a.length - 1; i++) {
+            for (int j = 0; j < a.length - 1 - i; j++) {
+                if (!Util.lessOrEqual(a[j], a[j+1])){
+                    Util.exch(a, j, j+1);
+                }
+            }
+        }
+        Util.show(a);
+    }
 }
