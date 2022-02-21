@@ -46,3 +46,4 @@
   - Key delMax() 删除并返回最大元素
   - boolean isEmpty() 返回队列是否为空
   - int size() 返回优先队列中的元素个数
+- insert和delMax方法的时间复杂度都是O(logn)
