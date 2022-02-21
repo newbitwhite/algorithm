@@ -18,6 +18,6 @@ public class Bubble{
                 }
             }
         }
-        Util.show(a);
+//        Util.show(a);
     }
 }
