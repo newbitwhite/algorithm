@@ -2,7 +2,14 @@ package fundamental.queue;
 
 /**
  * 优先队列
- *
+ *   - MaxPriorityQueue() 创建一个优先队列
+ *   - MaxPriorityQueue(int max) 创建一个初始容量为 max 的优先队列
+ *   - MaxPriorityQueue(Key[] a) 用 a[] 中的元素创建一个优先队列
+ *   - void Insert(Key v) 向优先队列中插入一个元素
+ *   - Key max() 返回最大元素
+ *   - Key delMax() 删除并返回最大元素
+ *   - boolean isEmpty() 返回队列是否为空
+ *   - int size() 返回优先队列中的元素个数
  * @author xiaobai
  * @date 2022-02-21 00:36
  */

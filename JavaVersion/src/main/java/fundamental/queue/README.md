@@ -46,4 +46,7 @@
   - Key delMax() 删除并返回最大元素
   - boolean isEmpty() 返回队列是否为空
   - int size() 返回优先队列中的元素个数
+- 堆
+  - 堆中某个结点的值总是不大于或不小于其父结点的值；
+  - 堆总是一棵完全二叉树。
 - insert和delMax方法的时间复杂度都是O(logn)
