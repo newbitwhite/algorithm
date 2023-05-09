@@ -1,4 +1,4 @@
-package effective_java.chapter2.item8;
+package effective_java.chapter2.item9.tryfinally;
 
 import java.io.*;
 
@@ -26,10 +26,6 @@ public class Copy {
     }
 
     public static void main(String[] args) throws IOException {
-        while(true){
-            Copy.copy("data/test.txt",
-                    "data/test2.txt");
-        }
-
+        Copy.copy("data/test.txt", "data/test2.txt");
     }
 }

@@ -1,4 +1,4 @@
-package effective_java.chapter2.item7;
+package effective_java.chapter2.item8;
 
 import java.lang.ref.Cleaner;
 

@@ -1,4 +1,4 @@
-package effective_java.chapter2.item6;
+package effective_java.chapter2.item7;
 
 import java.util.regex.Pattern;
 

@@ -1,4 +1,4 @@
-package effective_java.chapter2.item5;
+package effective_java.chapter2.item6;
 
 /**
  * @author ：xiaobai

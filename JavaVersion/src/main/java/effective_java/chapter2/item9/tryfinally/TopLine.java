@@ -1,4 +1,4 @@
-package effective_java.chapter2.item8;
+package effective_java.chapter2.item9.tryfinally;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -20,7 +20,7 @@ public class TopLine {
     }
 
     public static void main(String[] args) throws IOException {
-        String s = TopLine.fistLineOfFile("JavaVersion/src/main/java/effective_java/chapter2/item8/test.txt");
+        String s = TopLine.fistLineOfFile("data/test.txt");
         System.out.println(s);
     }
 }
