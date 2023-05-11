@@ -34,7 +34,7 @@ public class Quick{
         int index = low;
         int i = low;
         int j = high;
-        while (true){
+        while (j > i){
             while (Util.lessOrEqual(arr[i], arr[index])){
                 if (i >= high){
                     break;
@@ -59,15 +59,15 @@ public class Quick{
     public static void Quick_Sort(int[] arr, int begin, int end) {
         if(begin > end)
             return;
-        int index = arr[begin];
+        int index = arr[end];
         int i = begin;
         int j = end;
-        while(i != j){
-            while(arr[j] <= index && j > i){
-                j--;
-            }
-            while(arr[i] >= index && j > i){
+        while(j > i){
+            while(arr[i] <= index && j > i){
                 i++;
+            }
+            while(arr[j] >= index && j > i){
+                j--;
             }
             if(j > i){
                 int t = arr[i];
@@ -75,16 +75,16 @@ public class Quick{
                 arr[j] = t;
             }
         }
-        arr[begin] = arr[i];
-        arr[i] = index;
+        arr[end] = arr[j];
+        arr[j] = index;
         System.out.println(""+ begin + end  + "每轮排序结果：" + Arrays.toString(Arrays.copyOfRange(arr, begin, end + 1)));
-        Quick_Sort(arr, begin, i-1);
-        Quick_Sort(arr, i+1, end);
+        Quick_Sort(arr, begin, j-1);
+        Quick_Sort(arr, j+1, end);
     }
 
     public static void main(String[] args) {
         int times = 1;
-        int bound = 7;
+        int bound = 15;
         for (int i = 0; i < times; i++) {
             final int size = new Random().nextInt(bound);
             final int[] ints = new int[size];
